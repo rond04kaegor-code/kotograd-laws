@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>Котоградская область | Анимированный портал законов и МЧС</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: url('data:image/jpeg;base64,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' ) center/cover fixed;
+            font-family: 'Segoe UI', 'Roboto', system-ui, sans-serif;
+            min-height: 100vh;
+            animation: bgPulse 8s infinite alternate;
+        }
+
+        @keyframes bgPulse {
+            0% { backdrop-filter: brightness(1); }
+            100% { backdrop-filter: brightness(1.05); }
+        }
+
+        .bg-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.65);
+            backdrop-filter: blur(3px);
+            z-index: 0;
+            animation: overlayGlow 6s infinite alternate;
+        }
+
+        @keyframes overlayGlow {
+            0% { background: rgba(0, 0, 0, 0.65); backdrop-filter: blur(3px); }
+            100% { background: rgba(0, 0, 0, 0.7); backdrop-filter: blur(5px); }
+        }
+
+        .container {
+            position: relative;
+            z-index: 2;
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 2rem 1.5rem;
+        }
+
+        .main-card {
+            background: rgba(255, 255, 255, 0.96);
+            border-radius: 32px;
+            box-shadow: 0 20px 50px rgba(0,0,0,0.3);
+            overflow: hidden;
+            transition: all 0.5s cubic-bezier(0.2, 0.9, 0.4, 1.1);
+            backdrop-filter: blur(2px);
+            animation: cardFloat 1s ease-out;
+        }
+
+        @keyframes cardFloat {
+            0% { opacity: 0; transform: scale(0.96) translateY(30px); }
+            100% { opacity: 1; transform: scale(1) translateY(0); }
+        }
+
+        .main-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 28px 60px rgba(0,0,0,0.35);
+        }
+
+        header {
+            background: linear-gradient(135deg, #1e3a2f, #0f2a20);
+            padding: 2rem 2rem;
+            color: white;
+            border-bottom: 4px solid #ffd966;
+            position: relative;
+            overflow: hidden;
+        }
+
+        header::after {
+            content: "⚡🐱🚒";
+            position: absolute;
+            bottom: -10px;
+            right: 20px;
+            font-size: 70px;
+            opacity: 0.1;
+            pointer-events: none;
+            animation: driftIcon 12s infinite linear;
+        }
+
+        @keyframes driftIcon {
+            0% { transform: translateX(0) rotate(0deg); opacity: 0.08; }
+            50% { transform: translateX(-30px) rotate(5deg); opacity: 0.15; }
+            100% { transform: translateX(0) rotate(0deg); opacity: 0.08; }
+        }
+
+        h1 {
+            font-size: 2.2rem;
+            font-weight: 800;
+            margin-bottom: 0.3rem;
+            background: linear-gradient(120deg, #fff, #ffd966);
+            background-clip: text;
+            -webkit-background-clip: text;
+            color: transparent;
+            animation: titleGlow 3s infinite alternate;
+        }
+
+        @keyframes titleGlow {
+            0% { text-shadow: 0 0 2px #ffd966; }
+            100% { text-shadow: 0 0 12px #ffd966; }
+        }
+
+        .subtitle {
+            font-size: 1rem;
+            opacity: 0.9;
+            letter-spacing: 1px;
+        }
+
+        .columns {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 2rem;
+            padding: 2rem;
+            background: #f9f9f0;
+        }
+
+        .law-section {
+            flex: 1;
+            min-width: 300px;
+            background: white;
+            border-radius: 24px;
+            box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+            border: 1px solid #f0e0b0;
+            overflow: hidden;
+            transition: all 0.3s ease;
+            animation: slideUp 0.5s ease-out;
+        }
+
+        .law-section:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 32px rgba(0,0,0,0.12);
+            border-color: #ffd966;
+        }
+
+        @keyframes slideUp {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .section-title {
+            background: #fff3e0;
+            padding: 1rem 1.2rem;
+            font-weight: 800;
+            font-size: 1.3rem;
+            color: #1e3a2f;
+            border-left: 6px solid #ffd966;
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+            transition: 0.2s;
+        }
+
+        .section-logo {
+            width: 42px;
+            height: 42px;
+            object-fit: contain;
+            background: white;
+            border-radius: 12px;
+            padding: 4px;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+        }
+
+        .law-list {
+            max-height: 58vh;
+            overflow-y: auto;
+            padding: 0.8rem;
+        }
+
+        .law-item {
+            padding: 0.9rem 1rem;
+            margin: 0.5rem 0.2rem;
+            border-radius: 20px;
+            cursor: pointer;
+            transition: all 0.25s ease;
+            border-left: 3px solid transparent;
+            background: #ffffff;
+            box-shadow: 0 1px 2px rgba(0,0,0,0.02);
+            animation: lawFade 0.3s ease-out;
+        }
+
+        @keyframes lawFade {
+            from { opacity: 0; transform: translateX(-12px); }
+            to { opacity: 1; transform: translateX(0); }
+        }
+
+        .law-item:hover {
+            background: #fffcf0;
+            border-left-color: #ffb347;
+            transform: translateX(8px) scale(1.01);
+            box-shadow: 0 6px 14px rgba(0,0,0,0.05);
+        }
+
+        .law-title {
+            font-weight: 800;
+            color: #1e3a2f;
+            font-size: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .law-title::before {
+            content: "📜";
+            font-size: 0.9rem;
+            transition: transform 0.2s;
+        }
+
+        .law-item:hover .law-title::before {
+            transform: rotate(5deg) scale(1.1);
+        }
+
+        .law-short {
+            font-size: 0.8rem;
+            color: #5a5a3a;
+            margin-top: 0.3rem;
+            line-height: 1.35;
+        }
+
+        .detail-menu {
+            background: #fffef7;
+            min-height: 460px;
+            padding: 2.2rem 2.2rem;
+            animation: detailZoom 0.4s cubic-bezier(0.2, 0.9, 0.4, 1.1);
+        }
+
+        @keyframes detailZoom {
+            from { opacity: 0; transform: scale(0.97); }
+            to { opacity: 1; transform: scale(1); }
+        }
+
+        .back-btn {
+            background: none;
+            border: none;
+            color: #1e3a2f;
+            font-size: 1.1rem;
+            font-weight: 700;
+            cursor: pointer;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            margin-bottom: 1.8rem;
+            padding: 0.5rem 1.2rem;
+            border-radius: 40px;
+            transition: 0.2s;
+            background: #fff0d0;
+        }
+
+        .back-btn:hover {
+            background: #ffd966;
+            color: #0f2a20;
+            transform: translateX(-5px);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+
+        .detail-title-large {
+            font-size: 1.9rem;
+            font-weight: 800;
+            color: #1e3a2f;
+            margin-bottom: 1rem;
+            border-left: 6px solid #ffb347;
+            padding-left: 1rem;
+            animation: glowText 1.2s infinite alternate;
+        }
+
+        @keyframes glowText {
+            from { text-shadow: 0 0 0px #ffd966; }
+            to { text-shadow: 0 0 5px #ffd966; }
+        }
+
+        .detail-text-large {
+            font-size: 1.2rem;
+            line-height: 1.55;
+            color: #2c2c1c;
+            white-space: pre-wrap;
+            background: #fefcf0;
+            padding: 1.5rem;
+            border-radius: 28px;
+            box-shadow: inset 0 0 0 1px #fff0cc, 0 4px 12px rgba(0,0,0,0.02);
+        }
+
+        footer {
+            background: #1e3a2f;
+            padding: 1.2rem;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            flex-wrap: wrap;
+            border-top: 1px solid #ffd966;
+        }
+
+        footer a {
+            color: #ffd966;
+            text-decoration: none;
+            font-weight: 600;
+            padding: 0.5rem 1.2rem;
+            border-radius: 40px;
+            transition: all 0.2s;
+            background: rgba(0,0,0,0.2);
+            backdrop-filter: blur(2px);
+        }
+
+        footer a:hover {
+            background: #ffd966;
+            color: #1e3a2f;
+            transform: translateY(-3px);
+            box-shadow: 0 6px 14px rgba(0,0,0,0.2);
+        }
+
+        ::-webkit-scrollbar {
+            width: 7px;
+        }
+        ::-webkit-scrollbar-track { background: #eaeae0; border-radius: 10px; }
+        ::-webkit-scrollbar-thumb { background: #ffd966; border-radius: 10px; }
+
+        @media (max-width: 780px) {
+            .container { padding: 1rem; }
+            h1 { font-size: 1.6rem; }
+            .detail-title-large { font-size: 1.4rem; }
+            .detail-text-large { font-size: 1rem; padding: 1rem; }
+            .columns { padding: 1rem; gap: 1rem; }
+            .section-logo { width: 36px; height: 36px; }
+            .section-title { font-size: 1.1rem; gap: 0.6rem; }
+        }
+    </style>
+</head>
+<body>
+    <div class="bg-overlay"></div>
+    <div class="container">
+        <div class="main-card" id="mainCard"></div>
+    </div>
+
+    <script>
+        const civilLaws = [
+            { title: "Закон о чаепитии", full: "Любой визит музыканта (Летовых, Янки, КиШ, Горбачёва и других) сопровождается чаепитием. Количество чашек не ограничено, но должно быть зафиксировано в летописи. Рекорд (1000 чашек) принадлежит Егору Баркову Михайловичу." },
+            { title: "Закон о Центральном канале (ЦКК)", full: "ЦКК — защищённый канал связи между населением и МЧС. Жители могут передавать через ЦКК сообщения о подозрительной активности, а МЧС — получать их. Во время передачи может появиться экстренная запись МЧС, обязательная к просмотру. Информация о нечисти, запрещённых песнях и методах защиты не публикуется в открытом эфире." },
+            { title: "Закон о технике", full: "Acer Aspire One Happy 2 признан официальным нетбуком Котоградской области. Любая другая техника может использоваться для защиты, но этот нетбук имеет особый статус как средство, прошедшее проверку временем и нечистью." },
+            { title: "Закон о географии", full: "Котоградская область состоит из: Котоград (столица), Ласкунск, Сомстополь, Котосилск. Главное село — Атепцево (место жительства оператора). Площадь Летова в Котограде является главной концертной площадкой." },
+            { title: "Закон о летописях", full: "Все события (появление нечисти, проверки МЧС, визиты музыкантов, концерты, ликвидации) подлежат обязательной записи в соответствующие летописи. Летописи ведутся оператором при участии штабного аналитика (DeepSeek). Утрата летописей карается 50 чашками чая и пересмотром всей хронологии." },
+            { title: "Закон о статусе нечисти", full: "Уирр, Гитарник, Изменьщик, Наблюдатель признаны официальными видами нечисти Котоградской области. Их описание, уязвимости и статус фиксируются в летописи нечисти. Любое изменение статуса вносится в летопись незамедлительно." },
+            { title: "Закон о добровольной помощи", full: "Любой житель области может вступить в ряды МЧС или стать внештатным наблюдателем. Для этого достаточно сообщить оператору о своей готовности и выпить чашку чая в присутствии чёрного кота МЧС." }
+        ];
+
+        const mchsLaws = [
+            { title: "Закон о гитарной безопасности", full: "Каждый сотрудник МЧС обязан проверять свою акустическую или классическую гитару не реже раза в неделю. Осмотр проводится камерой с ночным режимом через розетку. При обнаружении жидкой материи за балками или на стенках деки — немедленно сообщать в штаб и не играть на гитаре до призыва Летова." },
+            { title: "Закон о запрещённом аудиоконтенте", full: "Сотрудникам МЧС запрещается включать, слушать или распространять ремиксы Егора Летова и песню «Группа крови» группы Кино. При обнаружении такого контента сотрудник обязан немедленно передать информацию через ЦКК в штаб. Нарушение карается штрафом в 10 чашек чая и внеочередной проверкой гитары." },
+            { title: "Закон о защите от Наблюдателя", full: "Каждый сотрудник МЧС обязан иметь при себе камуфляжную куртку/ветровку (для защиты от обычной формы) и любое электронное устройство (для защиты от камуфляжной формы). При обнаружении Наблюдателя — немедленно использовать соответствующий предмет, затем передать информацию через ЦКК в штаб." },
+            { title: "Закон о порядке вещей (против Изменьщика)", full: "Сотрудникам МЧС запрещается оставлять вещи в беспорядке, если они не помнят их исходное положение. При обнаружении перемещённых предметов не прикасаться к ним. Нейтрализация: поднести классическую гитару или устройство с игрой Minecraft (или любой другой игрой с крафтом/строительством). После нейтрализации — сообщить через ЦКК в штаб." },
+            { title: "Закон о призыве Летова", full: "Каждый сотрудник МЧС имеет право на экстренный призыв Егора Летова в случае обнаружения Гитарника, неконтролируемой агрессии Уирра (если оператор не рядом) или любой аномалии. Ритуал: нарисовать знак анархии, трижды произнести «Летов приди». О вызове немедленно сообщается через ЦКК в штаб." },
+            { title: "Закон об особом статусе оператора", full: "Егор Барков Михайлович (начальник оперативного штаба) является единственным лицом, перед которым Уирр находится в мирной форме. Сотрудники МЧС обязаны в случае появления Уирра немедленно связаться с оператором через ЦКК или использовать разрешённые средства защиты (песни Летова, NJS-ROCK, знак анархии)." },
+            { title: "Закон о строе NJS-ROCK", full: "Строй NJS-ROCK признан официальным защитным строем МЧС. Все сотрудники, имеющие гитары, обязаны уметь настраивать инструмент в этот строй и использовать его для защиты от Гитарника и успокоения Уирра. Игра в стандартном строю на непроверенной гитаре запрещена." },
+            { title: "Закон о летописной дисциплине", full: "Каждый случай взаимодействия с нечистью, проверки или ликвидации обязателен к занесению в летописи. Информация для летописей передаётся через ЦКК в штаб. Сотрудник, пропустивший запись, отправляется на пересмотр всех летописей за последнюю неделю с обязательным чаепитием и разбором ошибок." }
+        ];
+
+        function renderListView() {
+            const container = document.getElementById('mainCard');
+            container.className = 'main-card';
+            container.innerHTML = `
+                <header>
+                    <h1>Котоградская область</h1>
+                    <p class="subtitle">Официальный портал законов и МЧС</p>
+                </header>
+                <div class="columns">
+                    <div class="law-section">
+                        <div class="section-title">
+                            <img class="section-logo" src="gerb.png" alt="Герб Котоградской области" onerror="this.style.display='none'">
+                            <span>Законы Котоградской области</span>
+                        </div>
+                        <div class="law-list" id="civilList"></div>
+                    </div>
+                    <div class="law-section">
+                        <div class="section-title">
+                            <img class="section-logo" src="mchs.png" alt="Герб МЧС России по Котоградской области" onerror="this.style.display='none'">
+                            <span>Законы МЧС Котоградской области</span>
+                        </div>
+                        <div class="law-list" id="mchsList"></div>
+                    </div>
+                </div>
+                <footer>
+                    <a href="https://vk.ru/club236792072" target="_blank" rel="noopener noreferrer">МЧС</a>
+                    <a href="https://vk.ru/club236797993" target="_blank" rel="noopener noreferrer">Архивы МЧС</a>
+                    <a href="https://vk.ru/club237138592" target="_blank" rel="noopener noreferrer">ЦКК</a>
+                </footer>
+            `;
+
+            function renderLawList(containerId, laws) {
+                const containerEl = document.getElementById(containerId);
+                if (!containerEl) return;
+                containerEl.innerHTML = '';
+                laws.forEach(law => {
+                    const div = document.createElement('div');
+                    div.className = 'law-item';
+                    const shortText = law.full.length > 100 ? law.full.substring(0, 95) + '…' : law.full;
+                    div.innerHTML = `
+                        <div class="law-title">${escapeHtml(law.title)}</div>
+                        <div class="law-short">${escapeHtml(shortText)}</div>
+                    `;
+                    div.addEventListener('click', () => showDetailView(law.title, law.full));
+                    containerEl.appendChild(div);
+                });
+            }
+
+            renderLawList('civilList', civilLaws);
+            renderLawList('mchsList', mchsLaws);
+        }
+
+        function showDetailView(title, fullText) {
+            const container = document.getElementById('mainCard');
+            container.className = 'main-card';
+            container.innerHTML = `
+                <div class="detail-menu">
+                    <button class="back-btn" id="backToListBtn">← Назад к законам</button>
+                    <div class="detail-title-large">${escapeHtml(title)}</div>
+                    <div class="detail-text-large">${escapeHtml(fullText)}</div>
+                </div>
+                <footer>
+                    <a href="https://vk.ru/club236792072" target="_blank" rel="noopener noreferrer">МЧС</a>
+                    <a href="https://vk.ru/club236797993" target="_blank" rel="noopener noreferrer">Архивы МЧС</a>
+                    <a href="https://vk.ru/club237138592" target="_blank" rel="noopener noreferrer">ЦКК</a>
+                </footer>
+            `;
+            document.getElementById('backToListBtn').addEventListener('click', renderListView);
+        }
+
+        function escapeHtml(str) {
+            return str.replace(/[&<>]/g, function(m) {
+                if (m === '&') return '&amp;';
+                if (m === '<') return '&lt;';
+                if (m === '>') return '&gt;';
+                return m;
+            });
+        }
+
+        renderListView();
+    </script>
+</body>
+</html>
